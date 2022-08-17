@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-public class Operations {
+public class Operation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
