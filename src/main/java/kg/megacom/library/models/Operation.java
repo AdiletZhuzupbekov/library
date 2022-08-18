@@ -12,7 +12,7 @@ import java.util.Date;
 @Entity
 public class Operation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     Date startDate;
     Date endDate;

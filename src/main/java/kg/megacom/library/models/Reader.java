@@ -28,4 +28,5 @@ public class Reader {
     }
     @JsonFormat(pattern="dd/MM/yyyy")
     Date birthDate;
+    int age;
 }

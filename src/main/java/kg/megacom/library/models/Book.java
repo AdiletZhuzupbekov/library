@@ -1,6 +1,9 @@
 package kg.megacom.library.models;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
@@ -14,10 +17,10 @@ import java.util.Set;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String title;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
             @JoinTable(
                     name = "book_authors",
                     joinColumns = @JoinColumn(name="book_id"),
